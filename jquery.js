@@ -14,6 +14,9 @@ for (var i = 0; i < 3; i++) {
     for (var j = 0; j < 3; j++) {
         ctx.beginPath();
         ctx.rect(i * size, j * size, size, size);
+        ctx.strokeStyle = "#262407";
+        ctx.lineWidth = 2;
+        ctx.shadowBlur = 0;
         ctx.stroke();
     }
 }
@@ -69,6 +72,9 @@ function restartGame() {
         for (var j = 0; j < 3; j++) {
             ctx.beginPath();
             ctx.rect(i * size, j * size, size, size);
+            ctx.strokeStyle = "#262407";
+            ctx.lineWidth = 2;
+            ctx.shadowBlur = 0;
             ctx.stroke();
         }
     }
@@ -81,15 +87,28 @@ function draw() {
         for (var j = 0; j < 3; j++) {
             ctx.beginPath();
             ctx.rect(i * size, j * size, size, size);
+            ctx.strokeStyle = "#262407";
+            ctx.lineWidth = 2;
+            ctx.shadowBlur = 0;
             ctx.stroke();
             if (arry[j][i] == 'Player_one') {
                 ctx.beginPath();
                 ctx.arc(i * size + size / 2, j * size + size / 2, 60, 0, 360);
+                ctx.strokeStyle = "#be820a";
+                ctx.lineWidth = 10;
+                ctx.shadowColor = "#be820a";
+                ctx.shadowBlur = 15;
                 ctx.stroke();
+                ctx.closePath();
             } else if (arry[j][i] == 'Player_two') {
                 ctx.beginPath();
                 ctx.rect(i * size + size / 2 - 50, j * size + size / 2 - 50, 100, 100);
+                ctx.strokeStyle = "#fff";
+                ctx.lineWidth = 10;
+                ctx.shadowColor = "#fff";
+                ctx.shadowBlur = 15;
                 ctx.stroke();
+                ctx.closePath();
             }
         }
     }

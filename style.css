@@ -1,19 +1,35 @@
 body {
+    background: #100b01;
     margin: 0;
     padding: 0;
+    font-family: cursive;
 }
 
 #canvas {
     margin: 0 auto;
     display: block;
-    background: #f1f5ff;
+    background: #ffffff03;
+    position: relative;
+}
+
+.background {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #be820a94;
+    left: 50%;
+    top: 50%;
+    z-index: 4;
+    transform: translate(-50%, -50%);
+    filter: blur(121px);
+    z-index: -1;
 }
 
 .players {
     display: flex;
     gap: 120px;
     justify-content: center;
-    padding: 30px 0;
+    padding: 10px 0;
 }
 
 .gameover {
@@ -29,9 +45,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 5;
 }
 
 .gameover.active {
     opacity: 1;
     visibility: visible;
+}
+
+.gameover button,
+.player-two,
+.player-one {
+    background: #ffffff03;
+    padding: 20px 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid #262407;
+    color: #fff;
+    backdrop-filter: blur(30px);
+    cursor: pointer;
 }
