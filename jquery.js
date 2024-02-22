@@ -9,6 +9,7 @@ var playerOnePoints = 0;
 var playerTwoPoints = 0;
 
 var arry = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+var countDraw = 0;
 
 for (var i = 0; i < 3; i++) {
     for (var j = 0; j < 3; j++) {
@@ -35,9 +36,15 @@ canvas.addEventListener('click', (e) => {
             chackGame(userTurn);
             userTurn = 'Player_one';
         }
+        countDraw++;
     }
     draw();
-    console.log(arry);
+    if (countDraw == 9) {
+        setTimeout(() => {
+            restartGame();
+            countDraw = 0;
+        }, 1000);
+    }
 });
 
 var drawgame = 0;
@@ -62,6 +69,7 @@ function chackGame(userTurn) {
             playerTwo.innerHTML = playerTwoPoints;
         }
         gameOverPattern.classList.add('active');
+        countDraw = 0;
     }
 }
 
