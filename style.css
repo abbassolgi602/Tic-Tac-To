@@ -5,6 +5,11 @@ body {
     font-family: cursive;
 }
 
+strong {
+    margin: 10px 0;
+    display: block;
+}
+
 #canvas {
     margin: 0 auto;
     display: block;
