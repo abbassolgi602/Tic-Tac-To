@@ -51,7 +51,7 @@ var drawgame = 0;
 function chackGame(userTurn) {
     if (
         (arry[0][0] == arry[0][1] && arry[0][1] == arry[0][2] && arry[0][0] != 0)
-        || (arry[1][0] == arry[1][1] && arr$y[1][1] == arry[1][2] && arry[1][0] != 0)
+        || (arry[1][0] == arry[1][1] && arry[1][1] == arry[1][2] && arry[1][0] != 0)
         || (arry[2][0] == arry[2][1] && arry[2][1] == arry[2][2] && arry[2][0] != 0)
 
         || (arry[0][0] == arry[1][0] && arry[1][0] == arry[2][0] && arry[0][0] != 0)
